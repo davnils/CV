@@ -1,0 +1,74 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt,letterpaper,final]{moderncv}
+\usepackage{fontspec}
+\moderncvtheme[darkred]{classic}
+
+% DOCUMENT LAYOUT
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{2cm}
+\AtBeginDocument{\recomputelengths}
+% FONTS
+\usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
+\usepackage[T1]{fontenc}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+
+% Remove % to set to different fonts
+%\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Adobe Caslon Pro}
+%\setmonofont[Scale=0.8]{Monaco} 
+
+% ---- CUSTOM AMPERSAND
+\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+
+% ---- MARGIN YEARS
+%\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
+
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR 
+% Personal Inofrmation
+\firstname{David}
+\familyname{Nilsson}
+\address{Kungshamra 48}{Solna, 17070}
+\mobile{0761162066}
+\email{nilsson.dd@gmail.com}
+
+\title{David Nilssons CV}
+
+\nopagenumbers{}
+
+\begin{document}
+
+\maketitle
+\section{Utbildning}
+% \cventry{2009-2014 (f\"{o} rv\"{a} ntad)}{Civilingenj\"{o} r i Datateknik, KTH, Stockholm}
+\cventry{2009-2014 (f\"{o}rv\"{a}ntad)}{Civilingenj\"{o}r i Datateknik, KTH}{Stockholm}{}{}{}
+\cventry{2006-2009}{Teknisk inriktning, Oscarsgymnasiet}{Oskarshamn}{}{}{}
+\section{Kunskaper} 
+  \cvline{Spr\aa k:}{C, C++, Assembler, Java, Matlab, Haskell, Verilog}
+  \cvline{Arkitekturer:}{X86, AVR, NIOS II, FPGA, GPU (CUDA)}
+  \cvline{Verktyg och milj\"{o}er :}{Windows, GNU/Linux, AVRStudio, Altera Quartus}
+  \cvline{Inom mjukvara :}{Programmering p\aa\ l\aa g niv\aa , s\"{a}kerhetsanalys av mjukvara, kryptografi, design och implementation av st\"{o}rre system}
+  \cvline{Inom h\aa rdvara :}{Embedded utveckling, konstruktion av digital elektronik, fels\"{o}kning, l\"{o}dning}
+\section{Arbetslivserfarenhet} 
+  \cventry{Sommaren 2011}{L\"{o}neadministrat\"{o}r}{Elajo Invest}{Oskarshamn}{}{
+    \begin{itemize}
+      \item Rutinarbete inf\"{o}r l\"{o}nek\"{o}rning och registrering av inkommande dokument.
+    \end{itemize}
+  }
+  \cventry{December 2008 --\\Augusti 2009}{L\"{o}neadministrat\"{o}r}{Elajo Elteknik AB}{Oskarshamn}{}{
+    \begin{itemize}% \itemsep -2pt % reduce space between items
+      \item Arbete i olika l\"{o}nesystem och extra hj\"{a}lp vid l\"{o}nek\"{o}rningar.
+    \end{itemize}
+  }
+  \cventry{Juni 2008 --\\Juli 2008}{Vaktm\"{a}stare}{Elajo Invest AB}{Oskarshamn}{}{
+    \begin{itemize}% \itemsep -2pt % reduce space between items
+      \item Arbete med r\"{o}jning och allm\"{a}na vaktm\"{a}starsysslor.
+    \end{itemize}
+  }
+\section{Extra}
+  \cvlistitem{Utvecklar open source - \url{https://github.com/davnils}}
+  \cvlistitem{Chief programmer f\"{o}r ett projekt i kursen mjukvarukonstruktion, 16 personer arbetar under ett halv\aa r mot KTH som arbetsgivare.}
+\end{document}
