@@ -5,82 +5,63 @@
 \usepackage{fontspec}
 \moderncvtheme[darkred]{classic}
 
-% DOCUMENT LAYOUT
 \usepackage[scale=0.85]{geometry}
 \setlength{\hintscolumnwidth}{2cm}
 \AtBeginDocument{\recomputelengths}
-% FONTS
+
 \usepackage[utf8]{inputenc}
 \usepackage[swedish]{babel}
 \usepackage[T1]{fontenc}
-\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\defaultfontfeatures{Mapping=tex-text}
 
-% Remove % to set to different fonts
-%\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Adobe Caslon Pro}
-%\setmonofont[Scale=0.8]{Monaco} 
-
-% ---- CUSTOM AMPERSAND
 \newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
 
-% ---- MARGIN YEARS
-%\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
-
-
-% PDF SETUP
-% ---- FILL IN HERE THE DOC TITLE AND AUTHOR 
-% Personal Inofrmation
 \firstname{David}
 \familyname{Nilsson}
-\address{Kungshamra 48}{Solna, 17070}
-\mobile{0761162066}
+\address{Kungshamra 48}{Solna, 17070, Sweden}
+\mobile{+46761162066}
 \email{nilsson.dd@gmail.com}
 
-\title{David Nilssons CV}
+\title{CV of David Nilsson}
 
 \nopagenumbers{}
 
 \begin{document}
 
 \maketitle
-\section{Utbildning}
-% \cventry{2009-2014 (f\"{o} rv\"{a} ntad)}{Civilingenj\"{o} r i Datateknik, KTH, Stockholm}
-\cventry{2009-2014 (f\"{o}rv\"{a}ntad)}{Civilingenj\"{o}r i Datateknik, KTH}{Stockholm}{}{}{}
-\cventry{2006-2009}{Teknisk inriktning, Oscarsgymnasiet}{Oskarshamn}{}{}{}
-\section{Kunskaper} 
-  \cvline{Spr\aa k:}{C, C++, Assembler, Java, Matlab, Haskell, Verilog}
-  \cvline{Arkitekturer:}{X86, AVR, NIOS II, FPGA, GPU (CUDA)}
-  \cvline{Verktyg och milj\"{o}er :}{Windows, GNU/Linux, AVRStudio, Altera Quartus}
-  \cvline{Inom mjukvara :}{Programmering p\aa\ l\aa gniv\aa , s\"{a}kerhetsanalys av mjukvara, kryptografi, design och implementation av st\"{o}rre system}
-  \cvline{Inom h\aa rdvara :}{Embedded utveckling, konstruktion av digital elektronik, fels\"{o}kning, l\"{o}dning}
-\section{Arbetslivserfarenhet} 
-  \cventry{Februari 2012 -- }{Embedded developer}{Optistring Technologies AB}{Stockholm}{}{
+\section{Education}
+\cventry{2009-2014 (expected)}{Bachelor's and Master's degree in Computer Science, KTH}{Stockholm, Sweden}{}{}{}
+\cventry{2006-2009}{Technical track, High School}{Oskarshamn, Sweden}{}{}{}
+\section{Knowledge} 
+  \cvline{Languages}{C, C++, Haskell, Java, Python, Verilog}
+  \cvline{Areas:}{Low-level software development, security, software design, functional programming}
+  \cvline{Architectures:}{X86, AVR, NIOS II, FPGA, GPU (CUDA)}
+\section{Work experience} 
+  \cventry{February 2012 -- September 2014\\  (excl. two month break)}{Embedded developer}{Optistring Technologies AB}{Stockholm}{}{
     \begin{itemize}
-      \item Design och implementation av mjukvara p\aa \ inbyggda system.
+      \item Focus on developing next-generation solar inverters in a small but highly skilled startup.
+      \item Design, implementation, verification, and troubleshooting of embedded systems.
+      \item Also work with connecting systems, such as embedded linux and data feeds in python.
     \end{itemize}
   }
-  \cventry{Januari 2012 -- \\Februari 2012}{Konsult inom embedded development}{Egen verksamhet}{Stockholm}{}{
+  \\
+  \\
+  \cventry{January 2012 -- \\February 2012}{Consultant in Embedded development}{}{Stockholm}{}{
     \begin{itemize}
-      \item Design och implementation av l\aa gniv\aa -mjukvara, bibliotek och visualiseringsprogram.
-      \item Arbete med RF och inh\"{a}mtning av sensordata.
+      \item Design and implementation of embedded software, libraries och visualization tools.
+      \item Work with RF connectivity and various sensors.
     \end{itemize}
   }
-  \cventry{Sommaren 2011}{L\"{o}neadministrat\"{o}r}{Elajo Invest}{Oskarshamn}{}{
+  \\
+  \\
+  \cventry{Summer 2011}{Salary administration}{Elajo Invest}{Oskarshamn}{}{
     \begin{itemize}
-      \item Rutinarbete inf\"{o}r l\"{o}nek\"{o}rning och registrering av inkommande dokument.
+      \item Routine work with salaries.
     \end{itemize}
   }
-  \cventry{December 2008 --\\Augusti 2009}{L\"{o}neadministrat\"{o}r}{Elajo Elteknik AB}{Oskarshamn}{}{
-    \begin{itemize}% \itemsep -2pt % reduce space between items
-      \item Arbete i olika l\"{o}nesystem och extra hj\"{a}lp vid l\"{o}nek\"{o}rningar.
-    \end{itemize}
-  }
-  \cventry{Juni 2008 --\\Juli 2008}{Vaktm\"{a}stare}{Elajo Invest AB}{Oskarshamn}{}{
-    \begin{itemize}% \itemsep -2pt % reduce space between items
-      \item Arbete med r\"{o}jning och allm\"{a}na vaktm\"{a}starsysslor.
-    \end{itemize}
-  }
-\section{Spr\aa k} 
-  \cvline{}{Hanterar b\aa de engelska och svenska flytande}
-\section{Extra}
-  \cvlistitem{Utvecklar open source - \url{https://github.com/davnils}}
+\section{Languages} 
+  \cvline{}{Fluent in both English and Swedish.}
+\section{Other}
+  \cvlistitem{Portfolio with open source projects - \url{https://github.com/davnils}}
+  \cvlistitem{Blog on theoretical computer science - \url{http://davnils.github.com}}
 \end{document}
