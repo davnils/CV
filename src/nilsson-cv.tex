@@ -30,14 +30,14 @@
 
 \maketitle
 \section{Education}
-\cventry{2009-2014 (expected)}{Bachelor's and Master's degree in Computer Science, KTH}{Stockholm, Sweden}{}{}{}
+\cventry{2009-2014 (expected)}{BSc and MSc in Computer Science (theoretical track), KTH}{Stockholm, Sweden}{}{}{}
 \cventry{2006-2009}{Technical track, High School}{Oskarshamn, Sweden}{}{}{}
 \section{Knowledge} 
   \cvline{Languages}{C, C++, Haskell, Java, Python, Verilog}
-  \cvline{Areas:}{Low-level software development, security, software design, functional programming}
-  \cvline{Architectures:}{X86, AVR, NIOS II, FPGA, GPU (CUDA)}
-\section{Work experience} 
-  \cventry{February 2012 -- September 2013\\  (excl. two month break)}{Embedded developer}{Optistring Technologies AB}{Stockholm}{}{
+  \cvline{Areas}{Low-level software development, theoretical computer science, security, functional programming}
+  \cvline{Architectures}{X86, AVR, FPGA, GPU (CUDA)}
+\section{Work Experience} 
+  \cventry{February 2012 -- September 2013}{Embedded developer}{Optistring Technologies AB}{Stockholm}{}{
     \begin{itemize}
       \item Focus on developing next-generation solar inverters in a small but highly skilled startup.
       \item Design, implementation, verification, and troubleshooting of embedded systems.
@@ -52,16 +52,65 @@
       \item Work with RF connectivity and various sensors.
     \end{itemize}
   }
+\section{Selection of Projects} 
+  \cventry{non-public}{PV inverter software}{Optistring Technologies AB}{\textasciitilde 40k LOC}{}{
+    Optistring is a swedish startup building next-generation solar power inverters.
+    I entered the company when it was time to build a first prototype for real solar installations.
+    During my time at the company I was the primary developer of the embedded systems, implemented in C.
+    The work covered everything from design, implementation, troubleshooting and such,
+    essentially taking responsibility for part of a product.
+    The system requires several components in order to deliver power output on the grid, such as low-level realtime communication, synchronization at several stages, and handling of various fault conditions.
+    While my primary role was embedded development, I was also heavily involved in developing solutions for streaming logging data, handling databases, and building solutions around embedded Linux systems.
+  }
   \\
   \\
-  \cventry{Summer 2011}{Salary administration}{Elajo Invest}{Oskarshamn}{}{
-    \begin{itemize}
-      \item Routine work with salaries.
-    \end{itemize}
+  \cventry{non-public}{Distributed approach to BTC markets}{Own project}{\textasciitilde 2k LOC}{}{
+    Project written in Haskell with focus on retrieving bitcoin (digital currency) market feeds in a reliable and scalable way.
+    Build up around a ``proxy layer'' which consists of public-facing nodes pooled together.
+    These nodes connect to a backend which handles health measures (such as node load) and regularly transmits requests to the proxy layer.
+    Bitcoin markets have publically available APIs providing orderbook and trade history.
+    These are requested periodically from the backend and the results are stored in a distributed database (currently Cassandra).
+    The project basically provides a pool of IP addresses and circumvents regional issues such as connectivity problems, but also adds scaling by integrating new proxy nodes while running.
+  }
+  \\
+  \\
+  \cventry{non-public}{Embedded software for motion platform}{Consultant work}{\textasciitilde 5k LOC}{}{
+    Embedded software written in C for sampling motion sensors (accelerometers and gyroscopes) over serial interfaces, and performing RF transmissions to a host application.
+    The data stream was then visualized with various example applications using a library implemented in C++.
+    This project gave some basic experience in embedded development and insight into issues such as power management on constrained systems.
+  }
+  \\
+  \\
+  \cventry{public}{Distributed SDE solver}{Own project}{\textasciitilde 1k LOC}{}{
+    Distributed approach to solving Stochastic Differential Equations implemented in Haskell.
+    Exposes a high-level interface for composing equations and parameters together with some method of computation, typically distribution over a cluster (using MPI) and a local multi-threaded solver.
+    This project was an experiment into distributed computations and type-level expressibility of complex programs in Haskell.
+  }
+  \\
+  \\
+  \cventry{non-public}{Library of algorithms}{Course project}{\textasciitilde 6k LOC}{}{
+    As part of the course \emph{problem solving and programming under pressure (popup)} I implemented a library in C++11 containing a wide range of algorithms.
+    There are four main categories: string algorithms, graph theory, number theory, and computational geometry.
+    The project was bencifical in getting working knowledge of C++ (and the new standard), but also in writing testable and correct code.
+  }
+  \\
+  \\
+  \cventry{public}{Kattis client}{Own project}{\textasciitilde 1.5k LOC}{}{
+    CLI tool used to interface with the Kattis online judge system, which is widely used at KTH and swedish programming competitions.
+    The project was implemented in Haskell and wraps a web client internally in order to automize several tasks and offer a clean and easy interface for the user.
+    It gave insight into functional patterns surrounding complex code and scalable error handling.
+  }
+  \\
+  \\
+  \cventry{public}{Reliable blind SQL injections}{Own project}{200 LOC}{}{
+    Example of applying theoretical concepts onto existing problems.
+    Blind SQL injections (injections lacking visible output) are typically detected by sending probes and measuring round-trip times.
+    This project is an implementation in C++ (and blog post) applying bootstrap methods from statistics to send approiate probes, but also gain confidence in results.
+    Eventually ended up in production at a swedish startup building security scanners.
   }
 \section{Languages} 
   \cvline{}{Fluent in both English and Swedish.}
 \section{Other}
   \cvlistitem{Portfolio with open source projects - \url{https://github.com/davnils}}
-  \cvlistitem{Blog on theoretical computer science - \url{http://davnils.github.com}}
+  \cvlistitem{Blog on computer science - \url{http://davnils.github.com}}
 \end{document}
