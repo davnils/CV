@@ -35,7 +35,7 @@
 \section{Knowledge} 
   \cvline{Languages}{C, C++, Haskell, Java, Python, Verilog}
   \cvline{Areas}{Low-level software development, theoretical computer science, security, functional programming}
-  \cvline{Architectures}{X86, AVR, FPGA, GPU (CUDA)}
+  \cvline{Architectures}{X86, AVR, FPGA}
 \section{Work Experience} 
   \cventry{February 2012 -- September 2013}{Embedded developer}{Optistring Technologies AB}{Stockholm}{}{
     \begin{itemize}
@@ -65,12 +65,13 @@
   \\
   \\
   \cventry{non-public}{Distributed approach to BTC markets}{Own project}{\textasciitilde 2k LOC}{}{
-    Project written in Haskell with focus on retrieving bitcoin (digital currency) market feeds in a reliable and scalable way.
-    Build up around a ``proxy layer'' which consists of public-facing nodes pooled together.
-    These nodes connect to a backend which handles health measures (such as node load) and regularly transmits requests to the proxy layer.
+    Project written in Haskell focusing on retrieving bitcoin (digital currency) market feeds.
     Bitcoin markets have publically available APIs providing orderbook and trade history.
-    These are requested periodically from the backend and the results are stored in a distributed database (currently Cassandra).
-    The project basically provides a pool of IP addresses and circumvents regional issues such as connectivity problems, but also adds scaling by integrating new proxy nodes while running.
+    This project solves the problem of reliably fetching market data while circumventing regional issues, such as connectivity problems.
+    It is built up around a ``proxy layer'' which consists of public-facing nodes pooled together.
+    These nodes connect to a backend which handles health measures (such as node load) and regularly transmits requests to the proxy layer.
+    Markets are dynamically loaded in the backend during runtime and then polled regularly through the proxy layer, with results saved in a distributed database.
+    This approach also provides benefits such as dynamic scaling and easy maintenance, since proxy nodes may be removed or added at any time.
   }
   \\
   \\
