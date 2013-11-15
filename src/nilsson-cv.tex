@@ -70,7 +70,7 @@
     This project solves the problem of reliably fetching market data while circumventing regional issues, such as connectivity problems.
     It is built up around a ``proxy layer'' which consists of public-facing nodes pooled together.
     These nodes connect to a backend which handles health measures (such as node load) and regularly transmits requests to the proxy layer.
-    Markets are dynamically loaded in the backend during runtime and then polled regularly through the proxy layer, with results saved in a distributed database.
+    Markets are dynamically loaded in the backend during runtime and then polled regularly through the proxy layer, with results saved in a distributed database (Cassandra).
     This approach also provides benefits such as dynamic scaling and easy maintenance, since proxy nodes may be removed or added at any time.
   }
   \\
